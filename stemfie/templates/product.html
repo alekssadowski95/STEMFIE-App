@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ product.name }}</h1>
+<a href="{{ url_for('static', filename='content/' + product.download_3d_filename) }}">Download</a>
+{% endblock content %}

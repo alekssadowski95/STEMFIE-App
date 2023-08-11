@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Free &<br>open source<br>construction blocks</h1>
+<a href="{{ url_for('product', id = random_product.id) }}">View random Block</a>
+<h2>Beams</h2>
+{% for product in featured_beams %}
+<a href="{{ url_for('product', id = product.id) }}">{{ product.name }}</a>
+{% endfor %}
+<a href="{{ url_for('category', cat_name = 'Beams') }}">More beams</a>
+<h2>Braces</h2>
+{% for product in featured_braces %}
+<a href="{{ url_for('product', id = product.id) }}">{{ product.name }}</a>
+{% endfor %}
+<a href="{{ url_for('category', cat_name = 'Braces') }}">More braces</a>
+<h2>Connectors</h2>
+{% for product in featured_connectors %}
+<a href="{{ url_for('product', id = product.id) }}">{{ product.name }}</a>
+{% endfor %}
+<a href="{{ url_for('category', cat_name = 'Connectors') }}">More connectors</a>
+<h2>Fasteners</h2>
+{% for product in featured_fasteners %}
+<a href="{{ url_for('product', id = product.id) }}">{{ product.name }}</a>
+{% endfor %}
+<a href="{{ url_for('category', cat_name = 'Fasteners') }}">More fasteners</a>
+<h2>Plates</h2>
+{% for product in featured_plates %}
+<a href="{{ url_for('product', id = product.id) }}">{{ product.name }}</a>
+{% endfor %}
+<a href="{{ url_for('category', cat_name = 'Plates') }}">More plates</a>
+<h2>Springs</h2>
+{% for product in featured_springs %}
+<a href="{{ url_for('product', id = product.id) }}">{{ product.name }}</a>
+{% endfor %}
+<a href="{{ url_for('category', cat_name = 'Springs') }}">More springs</a>
+<h2>Shafts</h2>
+{% for product in featured_shafts %}
+<a href="{{ url_for('product', id = product.id) }}">{{ product.name }}</a>
+{% endfor %}
+<a href="{{ url_for('category', cat_name = 'Shafts') }}">More shafts</a>
+<h2>Tools</h2>
+{% for product in featured_tools %}
+<a href="{{ url_for('product', id = product.id) }}">{{ product.name }}</a>
+{% endfor %}
+<a href="{{ url_for('category', cat_name = 'Tools') }}">More tools</a>
+{% endblock content %}

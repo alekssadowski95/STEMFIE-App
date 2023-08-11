@@ -11,11 +11,11 @@ module_dir_path = os.path.dirname(module_path)
 STL_FILES_DIR_PATH = os.path.join(module_dir_path, 'static', 'content')
 
 # Create flask app instance
-application = app = Flask(__name__)
+app = Flask(__name__)
 
 # Add database
 db = SQLAlchemy()
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.sqlite'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 

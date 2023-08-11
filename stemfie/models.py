@@ -1,10 +1,10 @@
 from stemfie import db
+import uuid
 
 
 class Product(db.Model):
     # required
-    id = db.Column(db.Integer, primary_key=True)
-    uuid = db.Column(db.String(32), unique=True, nullable=False)
+    id = db.Column(db.Integer, primary_key=True)    
     # default
     category = db.Column(db.String(100), nullable=False, default='Uncategorized')
     name = db.Column(db.String(100), nullable=False, default='Unnamed')

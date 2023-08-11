@@ -2,7 +2,7 @@
 
 {% block content %}
 <h1>Free &<br>open source<br>construction blocks</h1>
-<a href="{{ url_for('product', id = random_product.id) }}">View random Block</a>
+<a href="{{ url_for('product', id = random_product.id) }}">View random block</a>
 <h2>Beams</h2>
 {% for product in featured_beams %}
 <a href="{{ url_for('product', id = product.id) }}">{{ product.name }}</a>

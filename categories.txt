@@ -1,0 +1,39 @@
+beams
+    - angled
+        - t-shaped
+        - u-shaped
+    - straight
+        - box-section
+        - square ends
+        - threaded ends
+braces
+    - angled
+    - straight
+        - slotted both ends
+        - slotted centered
+        - slotted full length
+        - slotted sequential
+        - slotted single ends
+        - standard
+connectors
+    - nuts
+        - cam-locking
+        - threaded
+            - barrel threaded center
+            - barrel through-hole center
+            - cap nuts
+            - open
+    - pins
+        - cam-locking
+        - spring pin inner
+        - spring pin locating bidirectional
+        - spring pin locating unidirectional
+    - screws
+    - spacers
+    - threaded rods
+    - washers
+fasteners
+plates
+shafts
+springs
+tools

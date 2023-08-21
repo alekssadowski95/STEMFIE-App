@@ -1,8 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>{{ cat_name }}</h1>
-{% for product in products %}
-<a href="{{ url_for('product', id = product.id) }}">{{ product.name }}</a>
-{% endfor %}
+<div class="container col-md-12">
+    <div class="container-fluid px-0 mt-5 pt-3">
+        <h1 class="mb-3" style="color: #ff7f2a;">{{ cat_name }}</h1>
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-6">
+            {% for product in products %}
+            <div class="col mb-4">
+                <a href="{{ url_for('product', id = product.id) }}" class="card h-100">
+                    <img src="{{ url_for('static', filename = 'content/' + product.preview_img_filename ) }}" class="card-img-top" alt="{{ product.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: medium; color: black;">{{ product.name }}</h5>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
 {% endblock content %}

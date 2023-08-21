@@ -7,15 +7,16 @@ from .models import Product
 
 @app.route('/')
 def home():
+    no_of_featured = 5
     random_product =  Product.query.filter_by(is_active = 1).order_by(func.random()).first()
-    featured_beams = Product.query.filter_by(category = 'Beams', is_active = 1).order_by(desc(Product.relevance)).limit(3)
-    featured_braces = Product.query.filter_by(category = 'Braces', is_active = 1).order_by(desc(Product.relevance)).limit(3)
-    featured_connectors = Product.query.filter_by(category = 'Connectors', is_active = 1).order_by(desc(Product.relevance)).limit(3)
-    featured_fasteners = Product.query.filter_by(category = 'Fasteners', is_active = 1).order_by(desc(Product.relevance)).limit(3)
-    featured_plates = Product.query.filter_by(category = 'Plates', is_active = 1).order_by(desc(Product.relevance)).limit(3)
-    featured_shafts = Product.query.filter_by(category = 'Shafts', is_active = 1).order_by(desc(Product.relevance)).limit(3)
-    featured_springs = Product.query.filter_by(category = 'Springs', is_active = 1).order_by(desc(Product.relevance)).limit(3)
-    featured_tools = Product.query.filter_by(category = 'Tools', is_active = 1).order_by(desc(Product.relevance)).limit(3)
+    featured_beams = Product.query.filter_by(category = 'Beams', is_active = 1).order_by(desc(Product.relevance)).limit(no_of_featured)
+    featured_braces = Product.query.filter_by(category = 'Braces', is_active = 1).order_by(desc(Product.relevance)).limit(no_of_featured)
+    featured_connectors = Product.query.filter_by(category = 'Connectors', is_active = 1).order_by(desc(Product.relevance)).limit(no_of_featured)
+    featured_fasteners = Product.query.filter_by(category = 'Fasteners', is_active = 1).order_by(desc(Product.relevance)).limit(no_of_featured)
+    featured_plates = Product.query.filter_by(category = 'Plates', is_active = 1).order_by(desc(Product.relevance)).limit(no_of_featured)
+    featured_shafts = Product.query.filter_by(category = 'Shafts', is_active = 1).order_by(desc(Product.relevance)).limit(no_of_featured)
+    featured_springs = Product.query.filter_by(category = 'Springs', is_active = 1).order_by(desc(Product.relevance)).limit(no_of_featured)
+    featured_tools = Product.query.filter_by(category = 'Tools', is_active = 1).order_by(desc(Product.relevance)).limit(no_of_featured)
     return render_template('home.html', random_product = random_product, featured_beams = featured_beams, featured_braces = featured_braces, featured_connectors = featured_connectors, featured_fasteners = featured_fasteners, featured_plates = featured_plates, featured_shafts = featured_shafts, featured_springs = featured_springs, featured_tools = featured_tools)
 
 @app.route('/blocks/<id>')
@@ -28,7 +29,7 @@ def product(id):
     product.view_count = product.view_count + 1
     # commit iew count to database
     db.session.commit()
-    return render_template('viewer.html', product = product, domain = domain, str = str)
+    return render_template('product.html', product = product, domain = domain, str = str)
 
 @app.route('/category/<cat_name>')
 def category(cat_name):

@@ -1,38 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free & Open Source Construction Blocks | STEMFIE</title>
-<link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
-<!-- Favicon -->
-<link rel="icon" type="image/png" sizes="48x48" href="{{ url_for('static', filename='img/STEMFIE_favicon.svg') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-icons.css') }}">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-</head>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<body>
-<!-- Header -->
-<header>
-    <a class="ml-1" href="{{ url_for('home') }}" style="font-weight: 600;">
-        <img src="{{ url_for('static', filename='/img/STEMFIE_Logo_Horzontal.svg') }}" height="26" class="d-inline-block pr-1" style="float:left; margin-top: 12px; margin-left: 4px;" alt="STEMFIE"></img>
-    </a>
-    <div style="padding: 15px; color: rgb(0, 0, 0)">
-        <a href="{{ url_for('howto') }}">
-            <button type="button" class="btn btn-outline-secondary">How it works</button>
-        </a>
-    </div>
-</header>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
 
-{% block content %}
-{% endblock content %}
+        <!-- Title -->
+        {% if title %}
+            <title>{{ title }} | STEMFIE</title>
+        {% else %}
+            <title>Free & Open Source Construction Blocks | STEMFIE</title>
+        {% endif %}
+  
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" sizes="48x48" href="{{ url_for('static', filename='img/STEMFIE_favicon.svg') }}">
 
-<p>Copyright (C) 2023 STEMFIE and Aleksander Sadowski. Powered by <a href="https://www.fcviewer.com">FCViewer</a></p>
+        {% block style %}{% endblock style %}
+    </head>
+    <body>
+        <!-- Navbar-->
+        <nav class="navbar navbar-light theme-color-custom fixed-top" style="height: 64px;">
+            <a class="ml-1" href="{{ url_for('home') }}" style="font-weight: 600; position: absolute; left: 12px; top: 10px; z-index: 10;">
+                <img src="{{ url_for('static', filename='/img/STEMFIE_Logo_Horzontal.svg') }}" height="30" class="d-inline-block pr-1" style="float:left; margin-top: 7px;" alt="STEMFIE"></img>
+            </a>
+            <div style="margin-left: auto; margin-right: 0; ">
+                <a href="{{ url_for('howto') }}"><button type="button" class="btn btn-outline-secondary">How it works</button></a>
+            </div> 
+        </nav>
+        
+        <!-- Content -->
+        <div class="theme-color-custom" style="margin-top: 64px;">
+            {% block content %}{% endblock content %}
+        </div>
 
-</body>
+        <!-- Footer -->
+        <div class="site-footer pb-5 pt-3" style="border-top: 1px solid lightgray;">
+            <div class="pl-4 pr-4" style="text-align:center;">
+                <!-- Copyright -->
+                <p class="mb-0 text-muted" style="font-size: small;">&copy; 2023 STEMFIE and Aleksander Sadowski. All rights reserved. Powered by <a href="https://www.fcviewer.com">FCViewer</a></p>    
+            </div> 
+        </div>
 
-
-
+        <script src="{{ url_for('static', filename='jquery-3.5.1.slim.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
+        {% block scripts %}{% endblock scripts %}
+    </body>
+</html>

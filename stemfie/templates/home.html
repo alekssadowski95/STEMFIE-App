@@ -62,13 +62,16 @@
 </style>
 
 <div class="container col-md-12">
-    <div class="container-fluid  mb-3 hero" style="min-height: 60vh; border-radius: calc(.25rem - 1px); background-image: url({{url_for('static', filename='img/stemfie-parts-collection.jpg')}}); background-repeat: no-repeat; background-position: center center; background-size: cover; border: solid lightgrey 1px;">
-        <div class="row" >
-            <div class="col-md-4 p-4" >
-                <h1 class="mb-3" style="font-size: calc(1.5vw + 2rem);">Free &<br>Open Source<br>Construction<br>Blocks</h1>
-                <a class="btn-stemfie btn btn-lg" href="{{ url_for('product', id = random_product.id) }}">View random Block</a>
+    <div class="container-fluid mb-3 hero" style="height: 60vh; border-radius: calc(.25rem - 1px); background-image: url({{url_for('static', filename='img/stemfie-parts-collection.jpg')}}); background-repeat: no-repeat; background-position: center center; background-size: cover; border: solid lightgrey 1px;">
+        <div class="row" style="height: 100%;">
+            <div class="col-md-6 col-lg-4 col-xl-3 p-4" style="background-color: white; border-right: solid lightgray 1px;">
+                <div style="height: 100%; width: 100%">
+                    <h1 class="mb-3" style="font-size: calc(1.5vw + 2rem);">Free &<br>Open Source<br>Construction<br>Blocks</h1>
+                    <a class="btn-stemfie btn btn-lg" href="{{ url_for('product', id = random_product.id) }}">View random Block</a>
+                </div>
+
             </div>
-            <div class="col-md-8"></div>
+            <div class="col-md-6 col-lg-8 col-xl-9"></div>
         </div>
         
     </div>

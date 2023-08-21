@@ -1,8 +1,7 @@
 from flask import render_template, url_for, redirect
-from werkzeug.utils import secure_filename
 from sqlalchemy import desc, func
 
-from stemfie import app, db
+from stemfie import app, db, domain
 from .models import Product
 
 
@@ -29,7 +28,7 @@ def product(id):
     product.view_count = product.view_count + 1
     # commit iew count to database
     db.session.commit()
-    return render_template('product.html', product = product)
+    return render_template('viewer.html', product = product, domain = domain, str = str)
 
 @app.route('/category/<cat_name>')
 def category(cat_name):

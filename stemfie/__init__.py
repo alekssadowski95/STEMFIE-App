@@ -22,5 +22,11 @@ db.init_app(app)
 # Add secret key
 app.config['SECRET_KEY'] = '59f063a2e5406614813c5b07e129fdrb'
 
+prod = False
+if prod == True:
+    domain = "www.stemfie.com"
+else:
+    domain = "localhost:5000"
+
 # Add routes to app
 from stemfie import routes

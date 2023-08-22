@@ -68,7 +68,7 @@
             <div class="col-md-6 col-lg-4 col-xl-3 p-4" style="background-color: white; border-right: solid lightgray 1px;">
                 <div style="height: 100%; width: 100%">
                     <h1 class="mb-3" style="font-size: calc(1.5vw + 2rem);">Free &<br>Open Source<br>Construction<br>Blocks</h1>
-                    <a class="btn-stemfie btn btn-lg" href="{{ url_for('product', id = random_product.id) }}">View random Block</a>
+                    <a class="btn-stemfie btn btn-lg" href="{{ url_for('product', id = random_product.id) }}">Explore random Block</a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-8 col-xl-9"></div>
@@ -92,8 +92,11 @@
             </div>
             {% endfor %}
             <div class="col mb-4">
-                <a href="{{ url_for('category', cat_name = 'Beams') }}" class="card h-100 more-field">
-                    <img src="" class="card-img-top" alt="More beams">
+                <a href="{{ url_for('category', cat_name = 'Beams') }}" class="card h-100 more-field text-center p-4" style="text-decoration: none; color: black;">
+                    <div style="margin: auto;">
+                        <img src="{{ url_for('static', filename = 'img/more-opaque-stemfie.png' ) }}" style="width: 96px; height: 96px; " class="card-img-top" alt="More beams"><br>
+                        More Beams
+                    </div>      
                 </a>
             </div>
         </div>
@@ -112,8 +115,11 @@
             </div>
             {% endfor %}
             <div class="col mb-4">
-                <a href="{{ url_for('category', cat_name = 'Braces') }}" class="card h-100 more-field">
-                    <img src="" class="card-img-top" alt="More braces">
+                <a href="{{ url_for('category', cat_name = 'Braces') }}" class="card h-100 more-field text-center p-4" style="text-decoration: none; color: black;">
+                    <div style="margin: auto;">
+                        <img src="{{ url_for('static', filename = 'img/more-opaque-stemfie.png' ) }}" style="width: 96px; height: 96px; " class="card-img-top" alt="More Braces"><br>
+                        More Braces
+                    </div>      
                 </a>
             </div>
         </div>
@@ -132,8 +138,11 @@
             </div>
             {% endfor %}
             <div class="col mb-4">
-                <a href="{{ url_for('category', cat_name = 'Connectors') }}" class="card h-100 more-field">
-                    <img src="" class="card-img-top" alt="More connectors">
+                <a href="{{ url_for('category', cat_name = 'Connectors') }}" class="card h-100 more-field text-center p-4" style="text-decoration: none; color: black;">
+                    <div style="margin: auto;">
+                        <img src="{{ url_for('static', filename = 'img/more-opaque-stemfie.png' ) }}" style="width: 96px; height: 96px; " class="card-img-top" alt="More Connectors"><br>
+                        More Connectors
+                    </div>      
                 </a>
             </div>
         </div>
@@ -152,8 +161,11 @@
             </div>
             {% endfor %}
             <div class="col mb-4">
-                <a href="{{ url_for('category', cat_name = 'Fasteners') }}" class="card h-100 more-field">
-                    <img src="" class="card-img-top" alt="More fasteners">
+                <a href="{{ url_for('category', cat_name = 'Fasteners') }}" class="card h-100 more-field text-center p-4" style="text-decoration: none; color: black;">
+                    <div style="margin: auto;">
+                        <img src="{{ url_for('static', filename = 'img/more-opaque-stemfie.png' ) }}" style="width: 96px; height: 96px; " class="card-img-top" alt="More Fasteners"><br>
+                        More Fasteners
+                    </div>      
                 </a>
             </div>
         </div>
@@ -172,8 +184,11 @@
             </div>
             {% endfor %}
             <div class="col mb-4">
-                <a href="{{ url_for('category', cat_name = 'Plates') }}" class="card h-100 more-field">
-                    <img src="" class="card-img-top" alt="More plates">
+                <a href="{{ url_for('category', cat_name = 'Plates') }}" class="card h-100 more-field text-center p-4" style="text-decoration: none; color: black;">
+                    <div style="margin: auto;">
+                        <img src="{{ url_for('static', filename = 'img/more-opaque-stemfie.png' ) }}" style="width: 96px; height: 96px; " class="card-img-top" alt="More Plates"><br>
+                        More Plates
+                    </div>      
                 </a>
             </div>
         </div>
@@ -192,14 +207,14 @@
             </div>
             {% endfor %}
             <div class="col mb-4">
-                <div class="card h-100">
-                    <a href="{{ url_for('category', cat_name = 'Springs') }}">
-                        <img src="" class="card-img-top" alt="More springs">
-                    </a>
-                </div>
+                <a href="{{ url_for('category', cat_name = 'Springs') }}" class="card h-100 more-field text-center p-4" style="text-decoration: none; color: black;">
+                    <div style="margin: auto;">
+                        <img src="{{ url_for('static', filename = 'img/more-opaque-stemfie.png' ) }}" style="width: 96px; height: 96px; " class="card-img-top" alt="More Springs"><br>
+                        More Springs
+                    </div>      
+                </a>
             </div>
         </div>
-
         <h2>Shafts</h2>
         <p>Connect blocks through holes allowing for linear or static motion.</p>
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-6">
@@ -215,11 +230,12 @@
             </div>
             {% endfor %}
             <div class="col mb-4">
-                <div class="card h-100">
-                    <a href="{{ url_for('category', cat_name = 'Shafts') }}">
-                        <img src="" class="card-img-top" alt="More shafts">
-                    </a>
-                </div>
+                <a href="{{ url_for('category', cat_name = 'Shafts') }}" class="card h-100 more-field text-center p-4" style="text-decoration: none; color: black;">
+                    <div style="margin: auto;">
+                        <img src="{{ url_for('static', filename = 'img/more-opaque-stemfie.png' ) }}" style="width: 96px; height: 96px; " class="card-img-top" alt="More Shafts"><br>
+                        More Shafts
+                    </div>      
+                </a>
             </div>
         </div>
         <h2>Tools</h2>
@@ -237,11 +253,12 @@
             </div>
             {% endfor %}
             <div class="col mb-4">
-                <div class="card h-100">
-                    <a href="{{ url_for('category', cat_name = 'Tools') }}">
-                        <img src="" class="card-img-top" alt="More tools">
-                    </a>
-                </div>
+                <a href="{{ url_for('category', cat_name = 'Tools') }}" class="card h-100 more-field text-center p-4" style="text-decoration: none; color: black;">
+                    <div style="margin: auto;">
+                        <img src="{{ url_for('static', filename = 'img/more-opaque-stemfie.png' ) }}" style="width: 96px; height: 96px; " class="card-img-top" alt="More Tools"><br>
+                        More Tools
+                    </div>      
+                </a>
             </div>
         </div>
     </div>

@@ -1,5 +1,23 @@
 {% extends "base.html" %}
 
+{% block style %}
+<style>
+    .card-hover:hover {
+    border-color: #ff7f2a;
+    text-decoration: none;
+    }
+
+    .card-hover .card-body{
+        background-color: white;
+    }
+
+    .card-hover:hover .card-body{
+        background-color: #f5f5f5;
+    }
+</style>
+
+{% endblock style %}
+
 {% block content %}
 <div class="container col-md-12">
     <div class="container-fluid px-0 mt-5 pt-3">
@@ -7,8 +25,8 @@
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-6">
             {% for product in products %}
             <div class="col mb-4">
-                <a href="{{ url_for('product', id = product.id) }}" class="card h-100">
-                    <img src="{{ url_for('static', filename = 'content/' + product.preview_img_filename ) }}" class="card-img-top" alt="{{ product.name }}">
+                <a href="{{ url_for('product', id = product.id) }}" class="card card-hover h-100">
+                    <img src="{{ url_for('static', filename = 'content/' + product.preview_img_filename ) }}" class="card-img-top" alt="{{ product.name }}" style="background-color: #f6f6f6;">
                     <div class="card-body">
                         <h5 class="card-title" style="font-size: medium; color: black;">{{ product.name }}</h5>
                     </div>

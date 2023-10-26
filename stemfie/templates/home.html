@@ -9,6 +9,10 @@
         color: #ff7f2a;
     }
 
+    h2 a {
+        color: #ff7f2a;
+    }
+
     a {
         color: black;
     }
@@ -67,7 +71,7 @@
         <div class="row" style="height: 100%;">
             <div class="col-md-6 col-lg-4 col-xl-3 p-4" style="background-color: white; border-right: solid lightgray 1px;">
                 <div style="height: 100%; width: 100%">
-                    <h1 class="mb-3" style="font-size: calc(1.5vw + 2rem);">Free &<br>Open Source<br>Construction<br>Blocks</h1>
+                    <h1 class="mb-3" style="font-size: calc(1.5vw + 2rem);">Free &<br><span style="color: #ff7f2a;">Open Source</span><br>Construction<br>Set</h1>
                     <a class="btn-stemfie btn btn-lg" href="{{ url_for('product', id = random_product.id) }}">Explore random Block</a>
                 </div>
             </div>
@@ -77,13 +81,13 @@
 
     <!-- Collection -->
     <div class="container-fluid px-0 my-4">
-        <h2>Beams</h2>
+        <h2><a href="{{ url_for('category', cat_name = 'Beams') }}">Beams</a></h2>
         <p>Structure your builds using these frequently used blocks.</p>
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-6">
             {% for product in featured_beams %}
             <div class="col mb-4">
                 <a href="{{ url_for('product', id = product.id) }}" class="card card-hover h-100">
-                    <img src="{{ url_for('static', filename = 'content/' + product.preview_img_filename ) }}" class="card-img-top" alt="{{ product.name }}" >
+                    <img src="{{ url_for('static', filename = 'content/' + product.preview_img_filename ) }}" class="card-img-top" alt="{{ product.name }}" style="background-color: #f6f6f6;">
                     <div class="card-body">
                         <img src="{{ url_for('static', filename = 'img/STEMFIE_favicon.svg' ) }}" alt="STEMFIE Logo" style="z-index: 1; width: 20px; height: 20px; margin-bottom: 6px;">
                         <h5 class="card-title" style="font-size: medium; color: black;">{{ product.name }}</h5>

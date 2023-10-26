@@ -101,7 +101,7 @@
 <script src="{{ url_for('static', filename='jquery-3.5.1.slim.min.js') }}"></script>
 <script src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>  
 <script type="text/javascript">
-    var URL_OF_STL_MODEL_FILE = "{{ url_for('static', filename='content/default-blocks-preview-3d.stl') }}";
+    var URL_OF_STL_MODEL_FILE = "{{ url_for('static', filename='content/' + product.preview_3d_filename) }}";
 </script>
 <script id="helper" type="module" src="{{ url_for('static', filename='app.js') }}"></script>
 

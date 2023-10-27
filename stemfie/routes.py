@@ -40,6 +40,6 @@ def category(cat_name):
     products = Product.query.filter_by(category = cat_name)
     return render_template('category.html', cat_name = cat_name, products = products)
 
-@app.route('/how-stemfie-platform-works')
-def howto():
-    return render_template('howto.html')
+@app.route('/getting-started-with-stemfie-construction-set')
+def getting_started():
+    return render_template('getting-started.html')

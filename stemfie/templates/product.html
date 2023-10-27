@@ -36,7 +36,7 @@
         <img src="{{ url_for('static', filename='/img/STEMFIE_Logo_Horzontal.svg') }}" height="30" class="d-inline-block pr-1" style="float:left; margin-top: 7px;" alt="STEMFIE"></img>
     </a>
     <div style="margin-left: auto; margin-right: 0; ">
-        <a href="{{ url_for('howto') }}"><button type="button" class="btn btn-outline-secondary">How it works</button></a>
+        <a href="{{ url_for('getting_started') }}"><button type="button" class="btn btn-outline-secondary">Getting Started</button></a>
     </div> 
 </nav>
 
@@ -74,7 +74,7 @@
                     <img src="{{ url_for('static', filename='/img/STEMFIE_Logo_Horzontal.svg') }}" height="50" class="mb-3"alt="STEMFIE"></img>
                     <div>Your block is downloading...</div>
                 </div>
-                <a href="{{ url_for('howto') }}" style="" class="mb-5 pb-5">What's next?</a>
+                <a href="{{ url_for('getting_started') }}" class="mb-5 pb-5">What's next?</a>
                 <div class="input-group mb-2 mt-3">
                     <div class="input-group-prepend">
                         <button class="btn btn-lg btn-stemfie" onclick="toClipoard('{{ domain + '/blocks/' + str(product.id) }}')" type="button" id="button-addon1"><i class="bi bi-clipboard pr-2" style="float: left;"></i>Copy</button>

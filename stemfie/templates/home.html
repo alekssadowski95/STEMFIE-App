@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 
-
-
 {% block content %}
 <style>
     h2 {
@@ -104,7 +102,7 @@
                 </a>
             </div>
         </div>
-        <h2>Braces</h2>
+        <h2><a href="{{ url_for('category', cat_name = 'Braces') }}">Braces</a></h2>
         <p>Connect and support two or more blocks.</p>
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-6">
             {% for product in featured_braces %}
@@ -127,7 +125,8 @@
                 </a>
             </div>
         </div>
-        <h2>Connectors</h2>
+        <!-- To be added 
+        <h2><a href="{{ url_for('category', cat_name = 'Connectors') }}">Connectors</a></h2>
         <p>Join static or moving blocks together.</p>
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-6">
             {% for product in featured_connectors %}
@@ -150,7 +149,8 @@
                 </a>
             </div>
         </div>
-        <h2>Fasteners</h2>
+        -->
+        <h2><a href="{{ url_for('category', cat_name = 'Fasteners') }}">Fasteners</a></h2>
         <p>Fasten blocks using threaded screws, nuts, rivets, wedges, etc.</p>
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-6">
             {% for product in featured_fasteners %}
@@ -173,7 +173,7 @@
                 </a>
             </div>
         </div>
-        <h2>Plates</h2>
+        <h2><a href="{{ url_for('category', cat_name = 'Plates') }}">Plates</a></h2>
         <p>Use plates for creating two-dimensional structures.</p>
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-6">
             {% for product in featured_plates %}
@@ -196,7 +196,8 @@
                 </a>
             </div>
         </div>
-        <h2>Springs</h2>
+        <!-- To be added 
+        <h2><a href="{{ url_for('category', cat_name = 'Springs') }}">Springs</a></h2>
         <p>Add and retain force in your projects using linear and rotational springs.</p>
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-6">
             {% for product in featured_springs %}
@@ -219,7 +220,8 @@
                 </a>
             </div>
         </div>
-        <h2>Shafts</h2>
+        -->
+        <h2><a href="{{ url_for('category', cat_name = 'Shafts') }}">Shafts</a></h2>
         <p>Connect blocks through holes allowing for linear or static motion.</p>
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-6">
             {% for product in featured_shafts %}
@@ -242,7 +244,7 @@
                 </a>
             </div>
         </div>
-        <h2>Tools</h2>
+        <h2><a href="{{ url_for('category', cat_name = 'Tools') }}">Tools</a></h2>
         <p>Connect, measure, store, and process SEMFIE blocks.</p>
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-6">
             {% for product in featured_tools %}
@@ -269,6 +271,7 @@
 </div>
 
 {% endblock content %}
+
 <!-- Scripts -->
 {% block scripts %}
 <script>

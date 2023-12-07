@@ -4,3 +4,6 @@
 
 ## Getting Started
 [All steps required to reproduce this platform locally on Windows and Ubuntu]
+
+## Vision
+[Descirbe what our goal with the STEMFIE platform is and how it related to the STEMFIE project longterm]

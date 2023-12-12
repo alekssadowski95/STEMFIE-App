@@ -2,6 +2,8 @@
 [What is STEMFIE and how does this platform relate to it]
 [Image of a STEMFIE Project in print of a STEMFIE Platform screenshot, maybe even GIF, if technically possible]
 
+![](images/stemfie-release.jpg)
+
 ## Getting Started
 [All steps required to reproduce this platform locally on Windows and Ubuntu]
 

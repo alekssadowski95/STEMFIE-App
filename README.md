@@ -9,8 +9,6 @@ Beginning in July 2023, we have been working to create a way for browsing and do
 
 We already have countless ideas of what this can become in the future and we are dedicated to adding more and more features to it and expanding the entire ecosystem (e.g. Just like the STEMFIE color branded filament).
 
-This is important for the FreeCAD project, because it further perpetuates the vision for the FreeCAD project and demonstrates its use in the real world.
-
 ## Build STEMFIE Projects
 The STEMFIE rubber-band-driven car is easy and quick to build and demonstrates energy retention and controlled release to achieve motion. The inspiration for this design is borrowed from science classes in schools, using the mousetrap car.
 

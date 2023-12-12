@@ -7,6 +7,8 @@
 ![](images/stemfie-release.jpg)
 
 ## Build STEMFIE Projects
+The STEMFIE rubber-band-driven car is easy and quick to build and demonstrates energy retention and controlled release to achieve motion. The inspiration for this design is borrowed from science classes in schools, using the mousetrap car.
+
 ![](images/stemfie-car-project.jpg)
 
 ## Getting Started

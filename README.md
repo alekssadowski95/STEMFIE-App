@@ -6,7 +6,7 @@
 
 ![](images/stemfie-release.jpg)
 
-
+## Build STEMFIE Projects
 ![](images/stemfie-car-project.jpg)
 
 ## Getting Started

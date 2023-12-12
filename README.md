@@ -8,6 +8,8 @@ The STEMFIE construction set can be 3D printed at home with your own 3D printer 
 ![](images/stemfie-release.jpg)
 
 ## Build STEMFIE Projects
+Build your own projects, like the STEMFIE rubber-band-driven car.
+
 The STEMFIE rubber-band-driven car is easy and quick to build and demonstrates energy retention and controlled release to achieve motion. The inspiration for this design is borrowed from science classes in schools, using the mousetrap car.
 
 ![](images/stemfie-car-project.jpg)

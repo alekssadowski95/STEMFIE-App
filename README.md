@@ -2,7 +2,7 @@
 [What is STEMFIE and how does this platform relate to it]
 [Image of a STEMFIE Project in print of a STEMFIE Platform screenshot, maybe even GIF, if technically possible]
 
-![](images/STEMFIE_Logo_Horzontal_registered.jpg)
+<img src="images/STEMFIE_Logo_Horzontal_registered.jpg" width="300">
 
 ![](images/stemfie-release.jpg)
 

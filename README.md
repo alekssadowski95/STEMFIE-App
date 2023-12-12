@@ -6,6 +6,9 @@
 
 ![](images/stemfie-release.jpg)
 
+
+![](images/stemfie-car-project.jpg)
+
 ## Getting Started
 [All steps required to reproduce this platform locally on Windows and Ubuntu]
 

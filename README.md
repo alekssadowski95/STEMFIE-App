@@ -3,7 +3,7 @@ This is the 3D online app for the FreeCAD-build construction set STEMFIE!
 
 The STEMFIE construction set can be 3D printed at home with your own 3D printer and has been optimized for 3D printing.
 
-<img src="images/STEMFIE_Logo_Horzontal_registered.jpg" width="300">
+<img src="images/stemfie-3d-online-plattform-freecad.png" width="300">
 
 ![](images/stemfie-release.jpg)
 

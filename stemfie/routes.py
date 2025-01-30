@@ -4,12 +4,27 @@ from sqlalchemy import desc, func
 from stemfie import app, db, domain
 from .models import Product
 
+stemfie_repo = [
+    {
+    "id": "Beam%20AGD%20TSH%20SYM%20ESS%20BU03x02x01%20-%20SPN-BEM-1000%20(stemfie.org)",
+    "category": "beam",
+    "name": "Beam AGD TSH SYM ESS BU03x02x01 - SPN-BEM-1000 (stemfie.org)",
+    "relevance": 1,
+    "view_count": 100,
+    "is_active": True,
+    "preview_img_filename": "https://get.stemfie.org/Beams%20-%20Angled%20-%20T-shaped%20Symmetric%20-%20Square%20Ends/Beam%20AGD%20TSH%20SYM%20ESS%20BU03x02x01%20-%20SPN-BEM-1000%20(stemfie.org).jpg",
+    "preview_3d_filename": "",
+    "download_3d_filename": ""
+    }
+]
+
 
 @app.route('/')
 def home():
     no_of_featured = 5
     random_product =  Product.query.filter_by(is_active = 1).order_by(func.random()).first()
-    featured_beams = Product.query.filter_by(category = 'Beams', is_active = 1).order_by(desc(Product.relevance)).limit(no_of_featured)
+    # featured_beams = Product.query.filter_by(category = 'Beams', is_active = 1).order_by(desc(Product.relevance)).limit(no_of_featured)
+    featured_beams = stemfie_repo
     featured_braces = Product.query.filter_by(category = 'Braces', is_active = 1).order_by(desc(Product.relevance)).limit(no_of_featured)
     featured_connectors = Product.query.filter_by(category = 'Connectors', is_active = 1).order_by(desc(Product.relevance)).limit(no_of_featured)
     featured_fasteners = Product.query.filter_by(category = 'Fasteners', is_active = 1).order_by(desc(Product.relevance)).limit(no_of_featured)
@@ -22,13 +37,14 @@ def home():
 @app.route('/blocks/<id>')
 def product(id):
     # check if id is Integer
-    if not isinstance(int(id), int):
-        return redirect(url_for('home'))
-    product = Product.query.filter_by(id = id).first()
+    #if not isinstance(int(id), int):
+        #return redirect(url_for('home'))
+    #product = Product.query.filter_by(name = name).first()
+    product = stemfie_repo[0]
     # increment view count by 1
-    product.view_count = product.view_count + 1
-    # commit iew count to database
-    db.session.commit()
+    #product.view_count = product.view_count + 1
+    # commit view count to database
+    #db.session.commit()
     return render_template('product.html', product = product, domain = domain, str = str)
 
 @app.route('/category/<cat_name>')

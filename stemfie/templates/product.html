@@ -48,7 +48,7 @@
                 {{ product.name }}
             </span>
             <div type="button" data-toggle="modal" data-target="#shareModal" class="d-flex share-button" style="justify-content: center; align-items: center; border-radius: 0px 10px 0px 0px; border-left: 1px solid #a3a3a3;">
-                <a class="px-3 py-2" style="text-decoration: none; color: black;" href="{{ url_for('static', filename='/content/' + product.download_3d_filename) }}">
+                <a class="px-3 py-2" style="text-decoration: none; color: black;" href="https://get.stemfie.org/Beams%20-%20Angled%20-%20T-shaped%20Symmetric%20-%20Square%20Ends/Beam%20AGD%20TSH%20SYM%20ESS%20BU03x02x01%20-%20SPN-BEM-1000%20(stemfie.org).3mf">
                     <div class="pt-1" style="display: flex; justify-content: center; align-items: center;">
                         <img src="{{ url_for('static', filename='/img/download-stemfie.png') }}" style="width: 1.8rem; height: 1.8rem;">
                     </div>
@@ -101,7 +101,7 @@
 <script src="{{ url_for('static', filename='jquery-3.5.1.slim.min.js') }}"></script>
 <script src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>  
 <script type="text/javascript">
-    var URL_OF_STL_MODEL_FILE = "{{ url_for('static', filename='content/' + product.preview_3d_filename) }}";
+    var URL_OF_STL_MODEL_FILE = "https://get.stemfie.org/Beams%20-%20Angled%20-%20T-shaped%20Symmetric%20-%20Square%20Ends/Beam%20AGD%20TSH%20SYM%20ESS%20BU03x02x01%20-%20SPN-BEM-1000%20(stemfie.org).stl";
 </script>
 <script id="helper" type="module" src="{{ url_for('static', filename='app.js') }}"></script>
 
